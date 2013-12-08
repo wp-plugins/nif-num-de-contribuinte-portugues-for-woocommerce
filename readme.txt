@@ -7,7 +7,7 @@ Requires at least: 3.6
 Tested up to: 3.7.1
 Stable tag: 1.0
 
-This plugin adds the Portuguese VAT identification number (NIF/NIPC) as a new field to WooCommerce checkout and order details, if the billing address is from Portugal.
+This plugin adds the Portuguese NIF/NIPC as a new field to WooCommerce checkout and order details, if the billing address is from Portugal.
 
 == Description ==
 
