@@ -5,7 +5,7 @@ Author URI: http://www.webdados.pt
 Plugin URI: http://www.webdados.pt/produtos-e-servicos/internet/desenvolvimento-wordpress/nif-de-contribuinte-portugues-woocommerce-wordpress/
 Requires at least: 3.6
 Tested up to: 3.7.1
-Stable tag: 1.0
+Stable tag: 1.1
 
 This plugin adds the Portuguese NIF/NIPC as a new field to WooCommerce checkout and order details, if the billing address is from Portugal.
 
@@ -29,6 +29,9 @@ This plugin adds the Portuguese VAT identification number (NIF/NIPC) as a new fi
 The plugin is new, so no question is frequent. Ask us something ;-)
 
 == Changelog ==
+
+= 1.1 =
+* Bug fix after WooCommerce 2.1 changes.
 
 = 1.0 =
 * Initial release.
