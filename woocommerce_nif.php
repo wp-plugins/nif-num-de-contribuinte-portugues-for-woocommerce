@@ -3,7 +3,7 @@
  * Plugin Name: NIF (Num. de Contribuinte Português) for WooCommerce
  * Plugin URI: http://www.webdados.pt/produtos-e-servicos/internet/desenvolvimento-wordpress/nif-de-contribuinte-portugues-woocommerce-wordpress/
  * Description: This plugin adds the Portuguese VAT identification number (NIF/NIPC) as a new field to WooCommerce checkout and order details, if the billing address is from Portugal.
- * Version: 1.1.1
+ * Version: 1.2
  * Author: Webdados
  * Author URI: http://www.webdados.pt
  * Text Domain: woocommerce_nif
@@ -15,7 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * Check if WooCommerce is active
  **/
-if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+// Get active network plugins - "Stolen" from Novalnet Payment Gateway
+function nif_active_nw_plugins() {
+	if (!is_multisite())
+		return false;
+	$nif_activePlugins = (get_site_option('active_sitewide_plugins')) ? array_keys(get_site_option('active_sitewide_plugins')) : array();
+	return $nif_activePlugins;
+}
+if (in_array('woocommerce/woocommerce.php', (array) get_option('active_plugins')) || in_array('woocommerce/woocommerce.php', (array) nif_active_nw_plugins())) {
 
 	//Languages
 	add_action('plugins_loaded', 'woocommerce_nif_init');
