@@ -5,7 +5,7 @@ Author URI: http://www.webdados.pt
 Plugin URI: http://www.webdados.pt/produtos-e-servicos/internet/desenvolvimento-wordpress/nif-de-contribuinte-portugues-woocommerce-wordpress/
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 1.2.2
+Stable tag: 1.3
 
 This plugin adds the Portuguese NIF/NIPC as a new field to WooCommerce checkout and order details, if the billing address is from Portugal.
 
@@ -35,6 +35,9 @@ function woocommece_nif_checkout_required($fields) {
 }`
 
 == Changelog ==
+
+= 1.3 =
+* Adds the field to the My Acccount / Edit Billing Address form
 
 = 1.2.2 =
 * The value is now auto filled with the last one used
