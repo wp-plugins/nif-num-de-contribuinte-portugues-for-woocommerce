@@ -24,9 +24,15 @@ This plugin adds the Portuguese VAT identification number (NIF/NIPC) as a new fi
 
 == Frequently Asked Questions ==
 
-= Why is there no FAQs? =
+= How to make the NIF field required? =
 
-The plugin is new, so no question is frequent. Ask us something ;-)
+Just add this to your theme's functions.php file:
+
+`add_filter('woocommerce_checkout_fields', 'woocommece_nif_checkout_required', 11);
+function woocommece_nif_checkout_required($fields) {
+	$fields['billing']['billing_nif']['required']=true;
+	return $fields;
+}`
 
 == Changelog ==
 
